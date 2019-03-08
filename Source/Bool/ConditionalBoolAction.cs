@@ -10,7 +10,7 @@ namespace UnityAtoms
     public class ConditionalBoolAction : BoolAction
     {
         [SerializeField]
-        private ConditionalBoolGameActionHelper Conditional;
+        private ConditionalBoolGameActionHelper Conditional = null;
 
         public override void Do(bool t1)
         {

@@ -10,7 +10,7 @@ namespace UnityAtoms
     public class ConditionalFloatAction : FloatAction
     {
         [SerializeField]
-        private ConditionalFloatGameActionHelper Conditional;
+        private ConditionalFloatGameActionHelper Conditional = null;
 
         public override void Do(float t1)
         {

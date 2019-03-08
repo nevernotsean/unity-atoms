@@ -8,7 +8,7 @@ namespace UnityAtoms
     public class UpdateTimer : VoidAction
     {
         [SerializeField]
-        private Timer Timer;
+        private Timer Timer = null;
 
         public override void Do()
         {

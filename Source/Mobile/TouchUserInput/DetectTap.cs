@@ -9,19 +9,19 @@ namespace UnityAtoms.Mobile
     public class DetectTap : IGameEventListener<TouchUserInput>
     {
         [SerializeField]
-        private Timer FirstTapTimer;
+        private Timer FirstTapTimer = null;
         [SerializeField]
-        private Timer SecondTapTimer;
+        private Timer SecondTapTimer = null;
         [SerializeField]
-        private FloatReference MaxTimeBetweenTaps;
+        private FloatReference MaxTimeBetweenTaps = null;
         [SerializeField]
-        private FloatReference MaxDistanceBetweenTaps;
+        private FloatReference MaxDistanceBetweenTaps = null;
         [SerializeField]
-        private FloatReference MaxMovementToCountAsTap;
+        private FloatReference MaxMovementToCountAsTap = null;
         [SerializeField]
-        private TouchUserInputGameEvent OnTapDetectedEvent;
+        private TouchUserInputGameEvent OnTapDetectedEvent = null;
         [SerializeField]
-        private TouchUserInputGameEvent OnDoubleTapDetectedEvent;
+        private TouchUserInputGameEvent OnDoubleTapDetectedEvent = null;
 
         private Vector2 inputPosFirstTapDown;
 

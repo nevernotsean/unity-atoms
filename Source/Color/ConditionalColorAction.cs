@@ -10,7 +10,7 @@ namespace UnityAtoms
     public class ConditionalColorAction : ColorAction
     {
         [SerializeField]
-        private ConditionalColorGameActionHelper Conditional;
+        private ConditionalColorGameActionHelper Conditional = null;
 
         public override void Do(Color t1)
         {

@@ -12,13 +12,13 @@ namespace UnityAtoms
     public class GetUnusedGameObject : GameObjectVector3QuaternionFunction
     {
         [SerializeField]
-        private GameObjectList List;
+        private GameObjectList List = null;
 
         [SerializeField]
-        private GameObject Prefab;
+        private GameObject Prefab = null;
 
         [SerializeField]
-        private BoolGameObjectFunction IsNotUsed;
+        private BoolGameObjectFunction IsNotUsed = null;
 
         public override GameObject Call(Vector3 position, Quaternion quaternion)
         {

@@ -6,7 +6,7 @@ namespace UnityAtoms.Mobile
     public class TouchUserInputVariable : ScriptableObjectVariable<TouchUserInput, TouchUserInputGameEvent, TouchUserInputTouchUserInputGameEvent>
     {
         [SerializeField]
-        private DetectTap DetectTap;
+        private DetectTap DetectTap = null;
 
         private void OnEnable()
         {

@@ -10,7 +10,7 @@ namespace UnityAtoms.Mobile
     public class ConditionalTouchUserInputAction : TouchUserInputAction
     {
         [SerializeField]
-        public ConditionalTouchUserInputGameActionHelper Conditional;
+        public ConditionalTouchUserInputGameActionHelper Conditional = null;
 
         public override void Do(TouchUserInput t1)
         {

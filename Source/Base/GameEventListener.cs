@@ -7,12 +7,12 @@ namespace UnityAtoms
     public abstract class GameEventListener<T, GA, E, UER> : MonoBehaviour, IGameEventListener<T> where GA : GameAction<T> where E : GameEvent<T> where UER : UnityEvent<T>
     {
         [SerializeField]
-        private E Event;
+        private E Event = null;
 
         public E GameEvent { get { return Event; } set { Event = value; } }
 
         [SerializeField]
-        private UER UnityEventResponse;
+        private UER UnityEventResponse = null;
 
         [SerializeField]
         private List<GA> GameActionResponses = new List<GA>();
@@ -41,12 +41,12 @@ namespace UnityAtoms
     public abstract class GameEventListener<T1, T2, GA, E, UER> : MonoBehaviour, IGameEventListener<T1, T2> where GA : GameAction<T1, T2> where E : GameEvent<T1, T2> where UER : UnityEvent<T1, T2>
     {
         [SerializeField]
-        private E Event;
+        private E Event = null;
 
         public E GameEvent { get { return Event; } set { Event = value; } }
 
         [SerializeField]
-        private UER UnityEventResponse;
+        private UER UnityEventResponse = null;
 
         [SerializeField]
         private List<GA> GameActionResponses = new List<GA>();

@@ -7,9 +7,9 @@ namespace UnityAtoms.UI
     public class UIContainer : MonoBehaviour, IGameEventListener<string>
     {
         [SerializeField]
-        private StringVariable UIStateVariable;
+        private StringVariable UIStateVariable = null;
         [SerializeField]
-        private List<StringConstant> VisibleForStates;
+        private List<StringConstant> VisibleForStates = null;
 
         void Start()
         {

@@ -15,8 +15,8 @@ namespace UnityAtoms
         public bool CreateEventWithGameObject = false;
 
         public List<MH> MonoHooks;
-        public L1 Listener;
-        public L2 ListenerWithGameObject;
+        public L1 Listener = null;
+        public L2 ListenerWithGameObject = null;
 
         void Awake()
         {

@@ -6,16 +6,16 @@ namespace UnityAtoms
     public class ConditionalGameActionHelper<T1, GA, C> where GA : GameAction<T1> where C : GameFunction<bool, T1>
     {
         [SerializeField]
-        private C Condition;
+        private C Condition = null;
         [SerializeField]
-        private GA Action;
+        private GA Action = null;
         [SerializeField]
-        private VoidAction VoidAction;
+        private VoidAction VoidAction = null;
 
         [SerializeField]
-        private GA ElseAction;
+        private GA ElseAction = null;
         [SerializeField]
-        private VoidAction ElseVoidAction;
+        private VoidAction ElseVoidAction = null;
 
         public void Do(T1 t1)
         {
@@ -35,16 +35,16 @@ namespace UnityAtoms
     public class ConditionalGameActionHelper<T1, T2, GA, C> where GA : GameAction<T1, T2> where C : GameFunction<bool, T1, T2>
     {
         [SerializeField]
-        private C Condition;
+        private C Condition = null;
         [SerializeField]
-        private GA Action;
+        private GA Action = null;
         [SerializeField]
-        private VoidAction VoidAction;
+        private VoidAction VoidAction = null;
 
         [SerializeField]
-        private GA ElseAction;
+        private GA ElseAction = null;
         [SerializeField]
-        private VoidAction ElseVoidAction;
+        private VoidAction ElseVoidAction = null;
 
         public void Do(T1 t1, T2 t2)
         {
@@ -64,16 +64,16 @@ namespace UnityAtoms
     public class ConditionalGameActionHelper<T1, T2, T3, GA, C> where GA : GameAction<T1, T2, T3> where C : GameFunction<bool, T1, T2, T3>
     {
         [SerializeField]
-        private C Condition;
+        private C Condition = null;
         [SerializeField]
-        private GA Action;
+        private GA Action = null;
         [SerializeField]
-        private VoidAction VoidAction;
+        private VoidAction VoidAction = null;
 
         [SerializeField]
-        private GA ElseAction;
+        private GA ElseAction = null;
         [SerializeField]
-        private VoidAction ElseVoidAction;
+        private VoidAction ElseVoidAction = null;
 
         public void Do(T1 t1, T2 t2, T3 t3)
         {
@@ -93,16 +93,16 @@ namespace UnityAtoms
     public class ConditionalGameActionHelper<T1, T2, T3, T4, GA, C> where GA : GameAction<T1, T2, T3, T4> where C : GameFunction<bool, T1, T2, T3, T4>
     {
         [SerializeField]
-        private C Condition;
+        private C Condition = null;
         [SerializeField]
-        private GA Action;
+        private GA Action = null;
         [SerializeField]
-        private VoidAction VoidAction;
+        private VoidAction VoidAction = null;
 
         [SerializeField]
-        private GA ElseAction;
+        private GA ElseAction = null;
         [SerializeField]
-        private VoidAction ElseVoidAction;
+        private VoidAction ElseVoidAction = null;
 
         public void Do(T1 t1, T2 t2, T3 t3, T4 t4)
         {
@@ -122,16 +122,16 @@ namespace UnityAtoms
     public class ConditionalGameActionHelper<T1, T2, T3, T4, T5, GA, C> where GA : GameAction<T1, T2, T3, T4, T5> where C : GameFunction<bool, T1, T2, T3, T4, T5>
     {
         [SerializeField]
-        private C Condition;
+        private C Condition = null;
         [SerializeField]
-        private GA Action;
+        private GA Action = null;
         [SerializeField]
-        private VoidAction VoidAction;
+        private VoidAction VoidAction = null;
 
         [SerializeField]
-        private GA ElseAction;
+        private GA ElseAction = null;
         [SerializeField]
-        private VoidAction ElseVoidAction;
+        private VoidAction ElseVoidAction = null;
 
         public void Do(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5)
         {

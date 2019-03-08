@@ -10,7 +10,7 @@ namespace UnityAtoms
     public class ConditionalVoidAction : VoidAction
     {
         [SerializeField]
-        private ConditionalVoidGameActionHelper Conditional;
+        private ConditionalVoidGameActionHelper Conditional = null;
 
         public override void Do()
         {

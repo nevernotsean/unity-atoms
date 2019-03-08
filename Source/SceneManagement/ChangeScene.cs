@@ -9,7 +9,7 @@ namespace UnityAtoms
     public class ChangeScene : VoidAction
     {
         [SerializeField]
-        private StringReference SceneName;
+        private StringReference SceneName = null;
 
         public override void Do()
         {
