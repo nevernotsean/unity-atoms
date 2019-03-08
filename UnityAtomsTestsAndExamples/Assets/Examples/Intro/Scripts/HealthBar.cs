@@ -5,7 +5,7 @@ using UnityAtoms;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField]
-    private IntConstant MaxHealth;
+    private IntConstant MaxHealth = null;
 
     public void HealthChanged(int health)
     {

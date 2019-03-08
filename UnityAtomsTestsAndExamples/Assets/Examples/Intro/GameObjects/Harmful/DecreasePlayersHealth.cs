@@ -9,7 +9,7 @@ namespace UnityAtoms.Examples
     public class DecreasePlayersHealth : Collider2DAction
     {
         [SerializeField]
-        private StringConstant TagPlayer;
+        private StringConstant TagPlayer = null;
 
         public override void Do(Collider2D collider)
         {
