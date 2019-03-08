@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityAtoms.Extensions;
 
 namespace UnityAtoms
 {
@@ -17,28 +18,16 @@ namespace UnityAtoms
         private GameObject Prefab;
 
         [SerializeField]
-        private BoolGameObjectFunction IsUsed;
+        private BoolGameObjectFunction IsNotUsed;
 
         public override GameObject Call(Vector3 position, Quaternion quaternion)
         {
-            if (IsUsed == null)
+            if (IsNotUsed == null)
             {
                 Debug.LogWarning("IsUsed must be defined!");
             }
 
-            for (int i = 0; i < List.Count; ++i)
-            {
-                if (!IsUsed.Call(List[i]))
-                {
-                    List[i].transform.position = position;
-                    List[i].transform.rotation = quaternion;
-                    return List[i];
-                }
-            }
-
-            var newGameObject = Instantiate(Prefab, position, quaternion);
-            List.Add(newGameObject);
-            return newGameObject;
+            return List.List.GetOrInstantiate(Prefab, position, quaternion, IsNotUsed.Call);
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace UnityAtoms.Mobile
 {
     [CreateAssetMenu(menuName = "Unity Atoms/Mobile/Touch User Input/Variable", fileName = "TouchUserInputVariable", order = CreateAssetMenuUtils.Order.VARIABLE)]
-    public class TouchUserInputVariable : EquatableScriptableObjectVariable<TouchUserInput, TouchUserInputGameEvent, TouchUserInputTouchUserInputGameEvent>
+    public class TouchUserInputVariable : ScriptableObjectVariable<TouchUserInput, TouchUserInputGameEvent, TouchUserInputTouchUserInputGameEvent>
     {
         [SerializeField]
         private DetectTap DetectTap;
@@ -27,6 +27,11 @@ namespace UnityAtoms.Mobile
         public bool IsPotentialDoubleTapInProgress()
         {
             return DetectTap != null && DetectTap.InUse() && DetectTap.IsPotentialDoubleTapInProgress();
+        }
+
+        protected override bool AreEqual(TouchUserInput first, TouchUserInput second)
+        {
+            return first.Equals(second);
         }
     }
 

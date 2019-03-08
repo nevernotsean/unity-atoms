@@ -4,7 +4,7 @@ using UnityEngine;
 namespace UnityAtoms.Mobile
 {
     [Serializable]
-    public struct TouchUserInput : IEquatable<TouchUserInput>
+    public struct TouchUserInput
     {
         public enum State
         {

@@ -5,20 +5,23 @@ using UnityAtoms;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Tests {
-    public class ScriptableObjectBaseTest {
-        
-        [Test] 
-        public void ScriptableObjectBaseTest_EqualityMembers() {
-            
+namespace Tests
+{
+    public class ScriptableObjectBaseTest
+    {
+
+        [Test]
+        public void ScriptableObjectBaseTest_EqualityMembers()
+        {
+
             var fieldinfo = typeof(StringConstant).GetField("value", BindingFlags.NonPublic | BindingFlags.Instance);
-            
+
             var stringConstant = ScriptableObject.CreateInstance<StringConstant>();
             fieldinfo.SetValue(stringConstant, "some constant string");
 
             var stringConstant2 = ScriptableObject.CreateInstance<StringConstant>();
             fieldinfo.SetValue(stringConstant2, "some constant string");
-            
+
             var stringConstant3 = ScriptableObject.CreateInstance<StringConstant>();
             fieldinfo.SetValue(stringConstant3, "some other string");
 
