@@ -50,6 +50,10 @@ namespace UnityAtoms
         {
             OnAfterDeserialize(); // removes double values and nulls
             _tags = sortedTags.Values.ToList();
+#if UNITY_EDITOR
+            // this null value is just for easier editing and could also be archived with an custom inspector
+            if(!EditorApplication.isPlaying){ _tags.Add(null); }
+#endif
         }
 
         #region Lifecycle
