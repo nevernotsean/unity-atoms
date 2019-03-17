@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace UnityAtoms
 {
-    [Serializable]
     public abstract class GameEvent<T> : ScriptableObject, IGameEvent<T>
     {
         private readonly List<IGameEventListener<T>> eventListeners = new List<IGameEventListener<T>>();
@@ -28,7 +27,6 @@ namespace UnityAtoms
         }
     }
 
-    [Serializable]
     public abstract class GameEvent<T1, T2> : ScriptableObject, IGameEvent<T1, T2>
     {
         private readonly List<IGameEventListener<T1, T2>> eventListeners = new List<IGameEventListener<T1, T2>>();

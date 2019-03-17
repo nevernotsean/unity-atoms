@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace UnityAtoms
 {
-    [Serializable]
     public abstract class ScriptableObjectList<T, E> : ScriptableObject where E : GameEvent<T>
     {
         [SerializeField]
